@@ -132,32 +132,48 @@
       padding: 15px 0;
       font-size: 0.9em;
     }
-    .car-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .car-card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 20px;
-      text-align: center;
-    }
-    .car-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-    }
-    .car-card h3 {
-      margin: 15px 0 10px;
-      font-size: 1.5em;
-    }
-    .car-card p {
-      font-size: 1em;
-      color: #666;
-    }
+ #cars {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.car-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-10px);
+}
+
+.car-card img {
+  width: 100%;
+  height: 200px; /* --- ตั้งให้สูงเท่ากัน --- */
+  object-fit: contain; /* --- ปรับภาพไม่บิด --- */
+  margin-bottom: 20px;
+}
+
+.car-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.car-card p {
+  font-size: 1rem;
+  color: #666;
+}
     @media (max-width: 768px) {
       .card {
         flex-direction: column;
@@ -201,27 +217,26 @@
   </div>
 </section>
 
-<!-- Our Cars Section -->
 <section class="content" id="cars">
   <h2>Our Cars / รถของเรา</h2>
   <div class="car-grid">
     <div class="car-card">
-      <img src="sedan.jpg" alt="Sedan - รถเก๋ง 4 ที่นั่ง">
+      <img src="sedan-Photoroom.png" alt="Sedan - รถเก๋ง 4 ที่นั่ง">
       <h3>Sedan</h3>
       <p>Comfortable 4-Seater Sedan / รถเก๋งขนาดเล็กสะดวกสบาย</p>
     </div>
     <div class="car-card">
-      <img src="camry.jpg" alt="Camry - รถเก๋งขนาดกลาง 4 ที่นั่ง">
+      <img src="camry-Photoroom.png" alt="Camry - รถเก๋งขนาดกลาง 4 ที่นั่ง">
       <h3>Camry</h3>
       <p>Luxury Camry Car / รถเก๋งขนาดกลางหรูหรา</p>
     </div>
     <div class="car-card">
-      <img src="suv.jpg" alt="SUV/MPV - รถอเนกประสงค์ 5 ที่นั่ง">
+      <img src="suv-Photoroom.png" alt="SUV/MPV - รถอเนกประสงค์ 5 ที่นั่ง">
       <h3>SUV / MPV</h3>
       <p>Spacious SUV / MPV / รถ SUV / MPV กว้างขวาง</p>
     </div>
     <div class="car-card">
-      <img src="van.jpg" alt="Van - รถตู้ VIP 9-11 ที่นั่ง">
+      <img src="van-Photoroom.png" alt="Van - รถตู้ VIP 9-11 ที่นั่ง">
       <h3>Van (9-11 Seats)</h3>
       <p>VIP Van for Groups / รถตู้ VIP สำหรับกลุ่มใหญ่</p>
     </div>
