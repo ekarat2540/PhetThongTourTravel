@@ -3,11 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Premium Private Car Rental Service from Suvarnabhumi Airport - Explore Thailand in Comfort. Safe, Reliable, and Affordable Travel with Phet Thong Tour & Travel.">
-  <meta name="keywords" content="Car Rental Thailand, Private Car Hire, Suvarnabhumi Airport Transfer, Bangkok Car Service, Pattaya Transfer, Hua Hin Taxi">
+  <meta name="description" content="Premium Private Car Rental Service from Suvarnabhumi Airport - Explore Thailand in Comfort. Safe, Reliable, and Affordable Travel with Phet Thong Tour & Travel. เช่ารถพร้อมคนขับ บริการรถรับส่งสนามบิน บริการรถตู้ VIP.">
+  <meta name="keywords" content="Car Rental Thailand, Private Car Hire, Suvarnabhumi Airport Transfer, Bangkok Car Service, Pattaya Transfer, Hua Hin Taxi, เช่ารถพร้อมคนขับ, บริการรถรับส่งสนามบิน, รถตู้ VIP">
   <meta name="author" content="Phet Thong Tour & Travel">
-  <title>Car for Rent | Phet Thong Tour & Travel</title>
+  <title>Car for Rent | บริการเช่ารถพร้อมคนขับ | Phet Thong Tour & Travel</title>
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -82,12 +88,6 @@
       justify-content: space-between;
       align-items: center;
     }
-    .card img {
-      max-width: 400px;
-      margin: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
     .card ul {
       font-size: 1.2em;
       line-height: 1.8em;
@@ -95,12 +95,22 @@
     .price-section {
       text-align: center;
     }
-    .price-section img {
-      max-width: 100%;
-      height: auto;
+    .swiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .swiper-slide {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .swiper-slide img {
+      width: 90%;
+      max-width: 800px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-top: 30px;
     }
     .contact-section {
       background: #003366;
@@ -121,6 +131,32 @@
       text-align: center;
       padding: 15px 0;
       font-size: 0.9em;
+    }
+    .car-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .car-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+    }
+    .car-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+    .car-card h3 {
+      margin: 15px 0 10px;
+      font-size: 1.5em;
+    }
+    .car-card p {
+      font-size: 1em;
+      color: #666;
     }
     @media (max-width: 768px) {
       .card {
@@ -162,13 +198,54 @@
         <li>💰 Affordable Luxury Travel / บริการหรูหราในราคาจับต้องได้</li>
       </ul>
     </div>
-    <!-- <img src="list.jpg" alt="Private Car and Price List"> -->
   </div>
 </section>
 
+<!-- Our Cars Section -->
+<section class="content" id="cars">
+  <h2>Our Cars / รถของเรา</h2>
+  <div class="car-grid">
+    <div class="car-card">
+      <img src="sedan.jpg" alt="Sedan - รถเก๋ง 4 ที่นั่ง">
+      <h3>Sedan</h3>
+      <p>Comfortable 4-Seater Sedan / รถเก๋งขนาดเล็กสะดวกสบาย</p>
+    </div>
+    <div class="car-card">
+      <img src="camry.jpg" alt="Camry - รถเก๋งขนาดกลาง 4 ที่นั่ง">
+      <h3>Camry</h3>
+      <p>Luxury Camry Car / รถเก๋งขนาดกลางหรูหรา</p>
+    </div>
+    <div class="car-card">
+      <img src="suv.jpg" alt="SUV/MPV - รถอเนกประสงค์ 5 ที่นั่ง">
+      <h3>SUV / MPV</h3>
+      <p>Spacious SUV / MPV / รถ SUV / MPV กว้างขวาง</p>
+    </div>
+    <div class="car-card">
+      <img src="van.jpg" alt="Van - รถตู้ VIP 9-11 ที่นั่ง">
+      <h3>Van (9-11 Seats)</h3>
+      <p>VIP Van for Groups / รถตู้ VIP สำหรับกลุ่มใหญ่</p>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Slider Section -->
 <section class="content price-section" id="pricing">
   <h2>Pricing Table</h2>
-  <img src="list.jpg" alt="Pricing Table">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="list1.jpg" alt="Car Rental Price Suvarnabhumi Airport เช่ารถพร้อมคนขับสนามบินสุวรรณภูมิ"></div>
+      <div class="swiper-slide"><img src="list2.jpg" alt="Car Rental Price Don Mueang Airport เช่ารถพร้อมคนขับสนามบินดอนเมือง"></div>
+      <div class="swiper-slide"><img src="list3.jpg" alt="Car Rental Price Bangkok City เช่ารถพร้อมคนขับในกรุงเทพ"></div>
+      <div class="swiper-slide"><img src="list4.jpg" alt="Car Rental Price Pattaya City เช่ารถพร้อมคนขับพัทยา"></div>
+      <div class="swiper-slide"><img src="list5.jpg" alt="Car Rental Price Pattaya Airport เช่ารถพร้อมคนขับสนามบินอู่ตะเภา"></div>
+      <div class="swiper-slide"><img src="list6.jpg" alt="Car Rental Price Hua Hin เช่ารถพร้อมคนขับหัวหิน"></div>
+      <div class="swiper-slide"><img src="list7.jpg" alt="Car Rental Price Koh Chang เช่ารถพร้อมคนขับเกาะช้าง"></div>
+      <div class="swiper-slide"><img src="list8.jpg" alt="Car Rental Price Samed Island เช่ารถพร้อมคนขับเกาะเสม็ด"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
 </section>
 
 <section class="contact-section" id="contact">
@@ -188,6 +265,24 @@
 <footer>
   &copy; 2025 Phet Thong Tour & Travel. All Rights Reserved.
 </footer>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.mySwiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
 
 </body>
 </html>
