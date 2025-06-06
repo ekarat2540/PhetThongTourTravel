@@ -1,100 +1,147 @@
 <!--
-  Phet Thong Tour & Travel – Fixed‑width variant (≈760 px) that mimics joetaxithai.com zoom/scale exactly.
-  • Centre‑aligned container, grey page background, subtle drop‑shadow like reference.
-  • Same navy/gold colour palette, but overall look now matches second screenshot (“zoom out”).
-  • Left vertical nav+contact stack remains; content column keeps ~540‑px width.
+  Phet Thong Tour & Travel – rev 3
+  * Sidebar: keeps compact contact block **plus** car images (sedan / suv / van).
+  * Hero slider: centered images, fixed max-height to stop layout shift on some screens.
 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Premium Private Transportation Service | Phet Thong Tour & Travel Thailand</title>
-<meta name="description" content="Private taxi & airport transfer service in Thailand – safe, reliable and affordable rides from Bangkok airports to Pattaya, Hua Hin, and beyond.">
-<meta name="keywords" content="private taxi Thailand, Bangkok airport transfer, VIP van rental, chauffeur service, Pattaya taxi, Hua Hin transfer, Phet Thong Tour & Travel">
-<link rel="canonical" href="https://www.phetthongtravel.com/">
-<link rel="alternate" hreflang="th-TH" href="https://www.phetthongtravel.com/th/">
-<link rel="alternate" hreflang="en-GB" href="https://www.phetthongtravel.com/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Premium Private Transportation Service – Travel Thailand with Peace of Mind">
-<meta property="og:description" content="Book private cars, SUVs or VIP vans with professional drivers. Best prices from Suvarnabhumi & Don Mueang to any destination.">
-<meta property="og:url" content="https://www.phetthongtravel.com/">
-<meta property="og:image" content="PT LOGO-01.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Phet Thong Tour & Travel – Private Taxi Thailand">
-<meta name="twitter:description" content="Stress-free transfers & day tours – book a sedan, SUV or VIP van today.">
-<meta name="twitter:image" content="PT LOGO-01.png">
+<meta name="viewport" content="width=760">
+<title>Phet Thong Tour & Travel – Private Transportation Thailand</title>
+<meta name="description" content="Premium private taxi, SUV and VIP van transfers from Bangkok airports to Pattaya, Hua Hin, Koh Chang and beyond.">
 <style>
-:root{--blue:#003366;--gold:#ffcc00;--light:#f5f7fa;--radius:14px}
+:root{--blue:#003366;--gold:#ffcc00;--radius:14px;--light:#f5f7fa}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,Helvetica,sans-serif;background:#dfe3eb;color:#333;line-height:1.55}
-img{max-width:100%;height:auto;display:block}
+body{font-family:Arial,Helvetica,sans-serif;background:#dfe3eb;color:#222;line-height:1.55}
+img{max-width:100%;display:block;height:auto}
 a{text-decoration:none;color:inherit}
-/* OUTER WRAPPER fixed width ~760 like reference */
-#wrapper{width:760px;background:#fff;margin:18px auto;box-shadow:0 0 12px rgba(0,0,0,.15);display:flex;flex-direction:column;min-height:90vh}
-/* HEADER */
-#header_wrap{background:var(--blue)}
-#header{padding:10px;text-align:center}
-#logo img{max-width:450px;margin:auto}
-/* TOP NAV */
-#topmenu_wrap{background:var(--blue);border-top:5px solid var(--gold);overflow-x:auto;white-space:nowrap}
-#topmenu_wrap::-webkit-scrollbar{display:none}
-#topmenu ul{list-style:none;display:inline-flex}
-#topmenu li a{display:block;padding:12px 20px;font-weight:700;font-size:.9rem;color:#fff}
-#topmenu li a:hover,#topmenu li a.active{background:var(--gold);color:#000}
-/* INNER LAYOUT */
+#wrapper{width:760px;background:#fff;margin:18px auto;box-shadow:0 0 12px rgba(0,0,0,.18);display:flex;flex-direction:column;min-height:92vh}
+/* header */
+#header_wrap{background:var(--blue)}#header{padding:12px 8px;text-align:center}#logo img{max-width:430px;height:auto}
+/* nav */
+#topmenu_wrap{background:var(--blue);border-top:4px solid var(--gold);white-space:nowrap;overflow-x:auto}#topmenu_wrap::-webkit-scrollbar{display:none}
+#topmenu ul{list-style:none;display:inline-flex}#topmenu li a{padding:12px 20px;font-size:.9rem;color:#fff;font-weight:700}#topmenu li a.active,#topmenu li a:hover{background:var(--gold);color:#000}
+/* layout */
 #content-menu_wrap{display:flex}
-/* left nav smaller (140px) */
-#leftmenu{flex:0 0 140px;padding:16px 10px;border-right:1px solid #ddd}
-#leftmenu ul{list-style:none}
-#leftmenu li a{display:block;padding:6px 4px;font-size:.85rem;border-bottom:1px solid #e3e3e3}
-#leftmenu li a:hover,#leftmenu li a.active{background:var(--gold)}
-.left-banners img{margin:10px 0;border-radius:var(--radius)}
-.contact-box{text-align:center;margin-top:14px;border-top:2px dashed #ccc;padding-top:12px}
-.contact-box img.icon{width:72px;margin:6px auto}
-.contact-box small{font-size:.75rem;line-height:1.3}
-/* CONTENT */
-#content-w2{flex:1;padding:20px 18px}
+#leftmenu{flex:0 0 110px;padding:14px 10px;border-right:1px solid #ccc}
+#leftmenu ul{list-style:none}#leftmenu li a{display:block;padding:6px 4px;font-size:.78rem;border-bottom:1px solid #e4e4e4}#leftmenu li a.active,#leftmenu li a:hover{background:var(--gold)}
+.side-contact{text-align:center;margin-bottom:12px}
+.side-contact img{width:90px;margin:4px auto;border-radius:12px;box-shadow:0 2px 5px rgba(0,0,0,.1)}
+.side-contact p{font-size:.7rem;margin:4px 0 8px}
+.left-banners{text-align:center}
+.left-banners img{width:90px;height:auto;margin:6px auto;border-radius:var(--radius);box-shadow:0 2px 5px rgba(0,0,0,.1)}
+#content-w2{flex:1;padding:18px 20px}
 #breadcrumbs{font-size:.8rem;color:#555;margin-bottom:12px}
-h1{font-size:1.5rem;color:var(--blue);margin:14px 0}
-h2{font-size:1.25rem;color:var(--blue);margin:14px 0}
-.hero-img{border:1px solid #eee;border-radius:var(--radius);overflow:hidden;margin-bottom:14px}
-ul{margin-left:20px;margin-bottom:10px}
-table{width:100%;border-collapse:collapse;margin:14px 0}td{border:1px solid #ccc;padding:6px}
-.pricing-img{border:1px solid #eee;border-radius:var(--radius);margin:14px 0}
-/* FOOTER */
-#footer_wrap{background:var(--blue);padding:6px;text-align:center;color:#fff;font-size:.8rem;margin-top:auto}
-/* MOBILE responsive still horiz‑scroll menus */
-@media(max-width:820px){#wrapper{width:100%;margin:0;box-shadow:none;border-radius:0}#leftmenu{flex-basis:110px;padding:12px 6px}}
+/* ---------- HERO SLIDER ---------- */
+.slider{position:relative;border:1px solid #eee;border-radius:var(--radius);overflow:hidden;margin-bottom:22px;background:#fff}
+.slider__track{display:flex;scroll-snap-type:x mandatory;overflow-x:auto;scroll-behavior:smooth}
+.slider__track::-webkit-scrollbar{display:none}
+.slider__slide{flex:0 0 100%;scroll-snap-align:start;display:flex;justify-content:center;align-items:center;min-height:260px}
+.slider__slide img{max-height:260px;width:auto}
+/* dots */
+.slider__nav{display:flex;justify-content:center;gap:8px;position:absolute;bottom:10px;left:0;right:0}
+.slider__nav a{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.5);display:inline-block}
+.slider__nav a:focus,.slider__nav a:hover{background:var(--gold)}
+/* arrows */
+.arrow{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:rgba(0,0,0,.45);color:#fff;text-align:center;line-height:34px;font-weight:700;font-size:1.2rem}
+.arrow:hover{background:rgba(0,0,0,.65)}
+.arrow--prev{left:8px}.arrow--next{right:8px}
+/* CONTACT main */
+#contact{margin-top:32px}
+.contact-grid{display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
+.contact-grid img{width:110px;height:110px;object-fit:contain;border-radius:16px;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.qr-row{margin-top:18px;display:flex;justify-content:center;gap:40px}
+.qr-row img{width:180px;border-radius:16px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.contact-info{margin-top:16px;font-size:1.15rem;line-height:1.55;text-align:center}
+/* PRICE STACK */
+.pricing-stack img{margin-bottom:22px;border:1px solid #eee;border-radius:var(--radius)}
+/* mobile tweaks */
+@media(max-width:600px){html,body{overflow-x:hidden}#leftmenu{flex-basis:80px;padding:8px 4px}#leftmenu li a{font-size:.7rem;padding:4px 4px}.contact-grid{gap:12px}.qr-row{gap:20px}.contact-info{font-size:1rem}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Phet Thong Tour & Travel","url":"https://www.phetthongtravel.com/","logo":"PT LOGO-01.png","description":"Premium private transportation: sedans, SUVs, VIP vans with professional drivers.","telephone":"+66979419177","priceRange":"$$","areaServed":"TH"}</script>
 </head>
 <body>
 <div id="wrapper">
-  <div id="header_wrap"><div id="header"><div id="logo"><img src="PT LOGO-01.png" alt="Phet Thong Tour & Travel"></div></div></div>
+  <!-- header -->
+  <div id="header_wrap"><div id="header"><div id="logo"><img src="PT LOGO-01.png" alt="PT Logo"></div></div></div>
+  <!-- nav -->
   <div id="topmenu_wrap"><div id="topmenu"><ul><li><a href="#" class="active">HOME</a></li><li><a href="#services">CARS RATE</a></li><li><a href="#daytours">DAY TRIP TOURS</a></li><li><a href="#attraction">ATTRACTION</a></li><li><a href="#contact">CONTACT US</a></li></ul></div></div>
+
   <div id="content-menu_wrap">
-    <!-- left -->
-    <aside id="leftmenu"><nav><ul><li><a href="#" class="active">Home</a></li><li><a href="#services">Cars Rate</a></li><li><a href="#daytours">Day Trip Tours</a></li><li><a href="#attraction">Attraction</a></li><li><a href="#contact">Contact Us</a></li></ul></nav>
-      <div class="left-banners"><img src="camry-Photoroom.png" alt="Sedan"><img src="suv-Photoroom.png" alt="SUV"><img src="van-Photoroom.png" alt="Van"></div>
-      <div class="contact-box" id="contact"><a href="mailto:pt.phetthong@gmail.com"><img src="text.jpg" class="icon" alt="Email"></a><a href="https://line.me/R/ti/p/%40phetthong" target="_blank"><img src="line.jpg" class="icon" alt="Line"></a><a href="https://wa.me/66979419177" target="_blank"><img src="tel.jpg" class="icon" alt="WhatsApp"></a><img src="pettong.jpg" alt="WhatsApp QR" class="icon"><img src="qr.jpg" alt="PromptPay" class="icon"><small>pt.phetthong@gmail.com<br>097‑941‑9177 (PT)<br>098‑184‑7026 (Mackys)</small></div>
+    <!-- sidebar -->
+    <aside id="leftmenu">
+      <ul><li><a href="#" class="active">Home</a></li><li><a href="#services">Cars Rate</a></li><li><a href="#daytours">Day Trip Tours</a></li><li><a href="#attraction">Attraction</a></li><li><a href="#contact">Contact Us</a></li></ul>
+      <div class="side-contact">
+        <img src="line.jpg" alt="Line icon">
+        <p>Line: 097-941-9177</p>
+        <img src="tel.jpg" alt="WhatsApp icon">
+        <p>WhatsApp: 097-941-9177</p>
+        <img src="text.jpg" alt="Email icon">
+        <p style="line-height:1.2">pt.phetthong@gmail.com</p>
+      </div>
+      <div class="left-banners">
+        <img src="camry-Photoroom.png" alt="Sedan">
+        <img src="suv-Photoroom.png" alt="SUV">
+        <img src="van-Photoroom.png" alt="Van">
+        <img src="sedan-Photoroom.png" alt="Sedan">
+      </div>
     </aside>
-    <!-- content -->
-    <main id="content-w2"><div id="breadcrumbs">You are here: Home</div>
-      <figure class="hero-img"><img src="camry-Photoroom.png" alt="Camry"></figure>
+
+    <!-- main -->
+    <main id="content-w2">
+      <div id="breadcrumbs">You are here: Home</div>
+
+      <!-- HERO slider (pure CSS) -->
+      <section class="slider" id="hero-slider">
+        <div class="slider__track" id="slides">
+          <div class="slider__slide" id="slide1"><img src="camry-Photoroom.png" alt="Toyota Camry"></div>
+          <div class="slider__slide" id="slide2"><img src="suv-Photoroom.png" alt="Modern SUV"></div>
+          <div class="slider__slide" id="slide3"><img src="van-Photoroom.png" alt="VIP Van"></div>
+        </div>
+        <a href="#slide3" class="arrow arrow--prev">‹</a>
+        <a href="#slide2" class="arrow arrow--next">›</a>
+        <div class="slider__nav">
+          <a href="#slide1"></a><a href="#slide2"></a><a href="#slide3"></a>
+        </div>
+      </section>
+
       <h1>Premium Private Transportation Service</h1>
       <p><strong>Travel with Peace of Mind – Explore Thailand in Comfort</strong></p>
-      <p>Make your journey in Thailand stress-free with <strong>Phet Thong Tour & Travel</strong>. Whether you're heading from the airport to your hotel, exploring must-see attractions, or catching your return flight, we provide reliable and comfortable private transfers tailored to your needs.</p>
-      <h2 id="services">Why Choose Phet Thong Tour & Travel?</h2>
-      <ul><li>🚗 <strong>Private & Comfortable</strong> – Enjoy a clean, modern vehicle all to yourself.</li><li>🌟 <strong>Personalized Service</strong> – Courteous drivers who care about every detail.</li><li>🛡️ <strong>Safe & Reliable</strong> – Professionally trained and vetted chauffeurs.</li><li>💰 <strong>Affordable Luxury</strong> – Premium quality at sensible rates.</li></ul>
-      <p>Wherever your adventure takes you in Thailand, Phet Thong Tour & Travel is here to make every moment smooth, safe, and memorable. Sit back, relax, and let us take care of the road.</p>
-      <h2>Our Fleet</h2>
-      <table><tr><td style="text-align:center"><img src="camry-Photoroom.png" alt="Camry"></td><td><strong>Camry Sedan</strong><br>4 seats – perfect for couples & business.</td></tr><tr><td style="text-align:center"><img src="suv-Photoroom.png" alt="SUV"></td><td><strong>SUV / MPV</strong><br>5 seats – extra luggage & comfort.</td></tr><tr><td style="text-align:center"><img src="van-Photoroom.png" alt="Van"></td><td><strong>VIP Van</strong><br>9‑11 seats – families & small groups.</td></tr></table>
-      <h2>Top Hit Service</h2><img src="list1.jpg" alt="Price list" class="pricing-img">
-      <h2>Ready to Book?</h2><p>Message us on <a href="https://line.me/R/ti/p/%40phetthong" target="_blank">LINE</a>, <a href="https://wa.me/66979419177" target="_blank">WhatsApp</a> or email <a href="mailto:pt.phetthong@gmail.com">pt.phetthong@gmail.com</a>.</p>
+      <p>Make your journey in Thailand stress-free with <strong>Phet Thong Tour & Travel</strong>. Whether you’re heading from the airport to your hotel, exploring must-see attractions, or catching your return flight, our private cars, SUVs and VIP vans with professional drivers have you covered.</p>
+
+      <!-- CONTACT main -->
+      <section id="contact">
+        <h2>Quick Contact</h2>
+        <div class="contact-grid">
+          <a href="mailto:pt.phetthong@gmail.com"><img src="text.jpg" alt="Email"></a>
+          <a href="https://line.me/R/ti/p/%40phetthong" target="_blank"><img src="line.jpg" alt="Line"></a>
+          <a href="https://wa.me/66979419177" target="_blank"><img src="tel.jpg" alt="WhatsApp"></a>
+        </div>
+        <div class="qr-row"><img src="pettong.jpg" alt="WhatsApp QR" class="qr-large"><img src="qr.jpg" alt="PromptPay QR" class="qr-large"></div>
+        <p class="contact-info"><strong>Email:</strong> pt.phetthong@gmail.com<br>
+          <strong>Phone:</strong> 097-941-9177 (PT), 098-184-7026 (Mackys)<br>
+          <strong>Line / WhatsApp:</strong> same as phone numbers</p>
+      </section>
+
+      <!-- pricing -->
+      <section id="pricing">
+        <h2>Popular Routes &amp; Rates (One-Way)</h2>
+        <div class="pricing-stack">
+          <img src="list1.jpg" alt="Price list BKK Airport">
+          <img src="list2.jpg" alt="Price list DMK Airport">
+          <img src="list3.jpg" alt="Price list Bangkok City">
+          <img src="list4.jpg" alt="Price list Pattaya City">
+          <img src="list5.jpg" alt="Price list U-Tapao Airport">
+          <img src="list6.jpg" alt="Price list Hua Hin">
+          <img src="list7.jpg" alt="Price list Koh Chang">
+          <img src="list8.jpg" alt="Price list Samed Island">
+        </div>
+      </section>
+
     </main>
   </div>
-  <div id="footer_wrap">© <span id="yr"></span> Phet Thong Tour & Travel</div>
+
+  <footer style="background:var(--blue);color:#fff;text-align:center;padding:6px;font-size:.8rem;margin-top:auto">© <span id="yr"></span> Phet Thong Tour & Travel</footer>
 </div>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
