@@ -1,6 +1,7 @@
 <!--
-  Phet Thong Tour & Travel – rev 3
-  * Sidebar: keeps compact contact block **plus** car images (sedan / suv / van).
+  Phet Thong Tour & Travel – rev 4
+  * Added “Why Choose” benefit section + SEO tweaks.
+  * Sidebar keeps compact contact block **plus** car images (sedan / suv / van).
   * Hero slider: centered images, fixed max-height to stop layout shift on some screens.
 -->
 <!DOCTYPE html>
@@ -65,17 +66,17 @@ a{text-decoration:none;color:inherit}
   <!-- header -->
   <div id="header_wrap"><div id="header"><div id="logo"><img src="PT LOGO-01.png" alt="PT Logo"></div></div></div>
   <!-- nav -->
-  <div id="topmenu_wrap"><div id="topmenu"><ul><li><a href="#" class="active">HOME</a></li><li><a href="#services">CARS RATE</a></li><li><a href="#daytours">DAY TRIP TOURS</a></li><li><a href="#attraction">ATTRACTION</a></li><li><a href="#contact">CONTACT US</a></li></ul></div></div>
+  <div id="topmenu_wrap"><div id="topmenu"><ul><li><a href="#" class="active">HOME</a></li><li><a href="#pricing">CARS RATE</a></li><li><a href="#contact">CONTACT US</a></li></ul></div></div>
 
   <div id="content-menu_wrap">
     <!-- sidebar -->
     <aside id="leftmenu">
-      <ul><li><a href="#" class="active">Home</a></li><li><a href="#services">Cars Rate</a></li><li><a href="#daytours">Day Trip Tours</a></li><li><a href="#attraction">Attraction</a></li><li><a href="#contact">Contact Us</a></li></ul>
+      <ul><li><a href="#" class="active">Home</a></li><li><a href="#pricing">Cars Rate</a></li><li><a href="#contact">Contact Us</a></li></ul>
       <div class="side-contact">
         <img src="line.jpg" alt="Line icon">
         <p>Line: 097-941-9177</p>
         <img src="tel.jpg" alt="WhatsApp icon">
-        <p>WhatsApp: 097-941-9177</p>
+        <p>WhatsApp: <br> 097-941-9177</p>
         <img src="text.jpg" alt="Email icon">
         <p style="line-height:1.2">pt.phetthong@gmail.com</p>
       </div>
@@ -109,6 +110,17 @@ a{text-decoration:none;color:inherit}
       <p><strong>Travel with Peace of Mind – Explore Thailand in Comfort</strong></p>
       <p>Make your journey in Thailand stress-free with <strong>Phet Thong Tour & Travel</strong>. Whether you’re heading from the airport to your hotel, exploring must-see attractions, or catching your return flight, our private cars, SUVs and VIP vans with professional drivers have you covered.</p>
 
+      <!-- WHY CHOOSE -->
+      <section id="why-choose" style="margin-top:26px">
+        <h2>Why Choose Phet Thong Tour &amp; Travel?</h2>
+        <ul style="list-style:none;padding-left:0;font-size:1rem;line-height:1.6">
+          <li style="margin:6px 0">🚗 <strong>Private &amp; Comfortable</strong> – Enjoy the convenience of a clean, modern vehicle all to yourself – perfect for solo travelers, couples, families, or groups.</li>
+          <li style="margin:6px 0">🌟 <strong>Personalized Service</strong> – We care about every detail of your journey. Our professional drivers are attentive and friendly, ensuring a smooth and enjoyable ride.</li>
+          <li style="margin:6px 0">🛡️ <strong>Safe &amp; Reliable</strong> – All drivers are carefully selected and well‑trained, ensuring your safety and peace of mind throughout the trip.</li>
+          <li style="margin:6px 0">💰 <strong>Affordable Luxury</strong> – High‑quality service at a price that won’t break your travel budget.</li>       
+        </ul>
+      </section>
+
       <!-- CONTACT main -->
       <section id="contact">
         <h2>Quick Contact</h2>
@@ -117,10 +129,10 @@ a{text-decoration:none;color:inherit}
           <a href="https://line.me/R/ti/p/%40phetthong" target="_blank"><img src="line.jpg" alt="Line"></a>
           <a href="https://wa.me/66979419177" target="_blank"><img src="tel.jpg" alt="WhatsApp"></a>
         </div>
-        <div class="qr-row"><img src="pettong.jpg" alt="WhatsApp QR" class="qr-large"><img src="qr.jpg" alt="PromptPay QR" class="qr-large"></div>
+        <div class="qr-row"><img src="pettong.jpg" alt="WhatsApp QR" class="qr-large"></div>
         <p class="contact-info"><strong>Email:</strong> pt.phetthong@gmail.com<br>
           <strong>Phone:</strong> 097-941-9177 (PT), 098-184-7026 (Mackys)<br>
-          <strong>Line / WhatsApp:</strong> same as phone numbers</p>
+          <!-- <strong>Line / WhatsApp:</strong> same as phone numbers</p> -->
       </section>
 
       <!-- pricing -->
