@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=760">
+<title>Phet Thong Tour &amp; Travel – รถเช่าพร้อมคนขับ | Private Transportation Thailand</title>
+<meta name="description" content="Premium private taxi, SUV and VIP van transfers from Bangkok airports to Pattaya, Hua Hin, Koh Chang and beyond. บริการรถเช่าส่วนตัวพร้อมคนขับ ไปพัทยา เกาะช้าง และทั่วไทย">
+<!-- ⭐️ SEO: bilingual keywords TH | EN  -->
+<meta name="keywords" content="รถเช่าพร้อมคนขับ, บริการคนขับรถ, รถเช่าส่วนตัว, รถตู้ VIP, รถแท็กซี่สนามบิน, พัทยา, เกาะช้าง, หัวหิน, Private car rental Thailand, Chauffeur service, VIP van Thailand, Pattaya transfer, Koh Chang taxi, Hua Hin car service, Bangkok airport taxi">
+<!-- ⭐️ Open Graph basic  -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Phet Thong Tour &amp; Travel">
+<meta property="og:title" content="รถเช่าพร้อมคนขับ | Private Taxi &amp; VIP Van Thailand – Phet Thong Tour &amp; Travel">
+<meta property="og:description" content="บริการรถแท็กซี่ส่วนตัว รถตู้ VIP พร้อมคนขับ จากสนามบินกรุงเทพฯ ไป พัทยา หัวหิน เกาะช้าง และทั่วไทย">
+<meta property="og:url" content="https://ptridetour.com/">
+<meta property="og:image" content="og-cover.jpg">
+
+<style>
+
+/* ----------  ROOT & RESET ---------- */
+:root{
+  --blue:#003366;
+  --gold:#ffcc00;
+  --radius:14px;
+  --light:#f5f7fa;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+
+/* ----------  BODY ---------- */
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  /* ลบ linear-gradient ทิ้ง เหลือแต่ภาพพื้นหลัง */
+  background:url('bg.png') center/cover fixed no-repeat;
+  color:#222;line-height:1.55;
+}
+img{max-width:100%;display:block;height:auto}
+a{text-decoration:none;color:inherit}
+
+
+/* ----------  HEADER & TOP-MENU ---------- */
+#header_wrap{
+    width:760px;
+    margin:0 auto;   /* จัดให้อยู่กลางแนวนอน */
+}           /* ไม่มีพื้นหลัง ให้โชว์โลโก้ล้วน */
+#header{padding:0;text-align:center;}
+#header img{
+    width:100%;                    /* ② กินความกว้างโหนด 100 % */
+    max-width:none;                /* ③ ไม่จำกัด 760px อีกต่อไป */
+    height:auto;
+    display:block;
+}
+
+#wrapper{
+  width:760px;
+  background:#fff;
+  margin:0 auto 18px;              /* ④ margin-top เป็น 0 → ชิด TOP-MENU */
+  box-shadow:0 0 12px rgba(0,0,0,.18);
+  display:flex;flex-direction:column;min-height:92vh;
+}
+#topmenu_wrap{
+  width:100%;
+  background:var(--blue);
+  border-top:4px solid var(--gold);
+  white-space:nowrap;
+  overflow-x:auto;
+}
+#topmenu_wrap::-webkit-scrollbar{display:none}
+#topmenu ul{list-style:none;display:inline-flex}
+#topmenu li a{
+  padding:12px 20px;
+  font-size:.9rem;
+  color:#fff;
+  font-weight:700;
+}
+#topmenu li a.active,
+#topmenu li a:hover{
+  background:var(--gold);
+  color:#000;
+}
+
+/* ----------  SIDEBAR + MAIN LAYOUT ---------- */
+#content-menu_wrap{display:flex}
+
+#leftmenu{
+  flex:0 0 110px;
+  padding:14px 10px;
+  border-right:1px solid #ccc;
+}
+#leftmenu ul{list-style:none}
+#leftmenu li a{
+  display:block;
+  padding:6px 4px;
+  font-size:.78rem;
+  border-bottom:1px solid #e4e4e4;
+}
+#leftmenu li a.active,
+#leftmenu li a:hover{background:var(--gold)}
+
+.side-contact{text-align:center;margin-bottom:12px}
+.side-contact img{
+  width:90px;
+  margin:4px auto;
+  border-radius:12px;
+  
+}
+
+.left-banners{text-align:center}
+.left-banners img{
+  width:90px;
+  margin:6px auto;
+  border-radius:var(--radius);
+  box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+
+#content-w2{flex:1;padding:18px 20px}
+#breadcrumbs{font-size:.8rem;color:#555;margin-bottom:12px}
+
+/* ----------  HERO SLIDER ---------- */
+.slider{
+  position:relative;
+  border:1px solid #eee;
+  border-radius:var(--radius);
+  overflow:hidden;
+  margin-bottom:22px;
+  background:#fff;
+}
+.slider__track{
+  display:flex;
+  scroll-snap-type:x mandatory;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+}
+.slider__track::-webkit-scrollbar{display:none}
+.slider__slide{
+  flex:0 0 100%;
+  scroll-snap-align:start;
+  display:flex;justify-content:center;align-items:center;
+  min-height:260px;
+  position:relative;
+}
+.slider__slide img{max-height:260px;width:auto}
+
+/* dots */
+.slider__nav{
+  display:flex;justify-content:center;gap:8px;
+  position:absolute;bottom:10px;left:0;right:0;
+}
+.slider__nav a{
+  width:12px;height:12px;border-radius:50%;
+  background:rgba(255,255,255,.5);display:inline-block;
+}
+.slider__nav a:focus,
+.slider__nav a:hover{background:var(--gold)}
+
+/* arrows */
+.arrow{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:34px;height:34px;border-radius:50%;
+  background:rgba(0,0,0,.45);color:#fff;
+  text-align:center;line-height:34px;
+  font-weight:700;font-size:1.2rem;
+}
+.arrow:hover{background:rgba(0,0,0,.65)}
+.arrow--prev{left:8px}
+.arrow--next{right:8px}
+
+/* ----------  CONTACT SECTION ---------- */
+#contact{margin-top:32px}
+.contact-grid{
+  display:flex;justify-content:center;
+  gap:18px;flex-wrap:wrap;
+}
+.contact-grid img{
+  width:110px;height:110px;object-fit:contain;
+  border-radius:16px;
+  box-shadow:0 2px 6px rgba(0,0,0,.12);
+}
+.qr-row{
+  margin-top:18px;
+  display:flex;justify-content:center;gap:40px;
+}
+.qr-row img{
+  width:180px;border-radius:16px;
+  box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+.contact-info{
+  margin-top:16px;
+  font-size:1.15rem;line-height:1.55;
+  text-align:center;
+}
+
+/* ----------  PRICE STACK ---------- */
+.pricing-stack img{
+  margin-bottom:22px;
+  border:1px solid #eee;
+  border-radius:var(--radius);
+}
+/* ---- Contact grid ---- */
+.contact-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;   /* จัดให้อยู่กลาง */
+  gap:14px;                 /* ระยะระหว่างช่อง */
+}
+
+.contact-grid a,
+.contact-grid img{          /* ให้ทุกช่องเท่ากัน */
+  width:72px; height:72px;          /* ไอคอนกลม / เหลี่ยมขนาดเดียว */
+  border-radius:14px;
+  background:#fff;
+  box-shadow:0 1px 4px rgba(0,0,0,.15);
+  display:flex; align-items:center; justify-content:center;
+}
+.contact-grid img{object-fit:contain}
+/* กล่องครอบรายการ */
+.dest-box{
+  display:flex;                 /* วาง 2 คอลัมน์ */
+  gap:0;                        /* ชิดกันให้เสมอ */
+  border:1px solid #ccc;
+  border-radius:4px;
+  overflow:hidden;              /* มุมมนทั้งกล่อง */
+  background:#fafbfd;
+  max-width:700px;              /* ปรับตามต้องการ */
+  margin:20px auto;             /* จัดให้อยู่กลาง */
+}
+
+/* แต่ละคอลัมน์ */
+.dest-box ul{
+  flex:1 1 50%;
+  list-style:disc inside;
+  margin:0;
+  padding:16px 24px;
+  font-size:1rem;
+  line-height:1.75;
+}
+
+/* เส้นแบ่งตรงกลางคอลัมน์ซ้าย */
+.dest-box ul:first-child{
+  border-right:1px solid #d1d1d1;
+}
+
+/* ข้อความเน้น */
+.dest-box li strong{font-weight:700;}
+
+/* ----------  MOBILE (≤600 px) ---------- */
+@media(max-width:600px){
+  html,body{overflow-x:hidden}
+  #leftmenu{flex-basis:80px;padding:8px 4px}
+  #leftmenu li a{font-size:.7rem;padding:4px 4px}
+  .contact-grid{gap:12px}
+  .qr-row{gap:20px}
+  .contact-info{font-size:1rem}
+}
+/* === DESTINATION CARDS (slider ยาวภายในกว้าง 760px) === */
+#destinations{margin:44px 0}
+#destinations h2{text-align:center;font-size:1.6rem;margin-bottom:20px}
+
+.dest-scroll{           /* รางเลื่อนแนวนอน */
+  display:flex;gap:14px;
+  overflow-x:auto;scroll-snap-type:x mandatory;
+  padding-bottom:6px;
+}
+.dest-scroll::-webkit-scrollbar{height:6px}
+.dest-scroll::-webkit-scrollbar-thumb{
+  background:var(--blue);border-radius:4px;
+}
+
+.card{
+  flex:0 0 230px;scroll-snap-align:start;
+  background:#fff;border-radius:var(--radius);
+  box-shadow:0 2px 8px rgba(0,0,0,.12);
+  overflow:hidden;transition:transform .25s;
+}
+.card:hover{transform:translateY(-6px)}
+.card img{width:100%;height:140px;object-fit:cover}
+.card h3{font-size:1rem;font-weight:700;padding:8px 10px 4px}
+.card p{font-size:.85rem;padding:0 10px 12px;min-height:92px;line-height:1.45}
+
+@media(max-width:600px){
+  .card{flex:0 0 70%}          /* swipe ดู 1-ใบครึ่งบนมือถือ */
+  .card img{height:120px}
+}
+/* === FIX overflow centre column === */
+#content-w2{overflow:hidden}           /* ตัดทุกอย่างที่ล้นกรอบ */
+
+.dest-scroll{
+  max-width:100%;                     /* ไม่ให้ยืดเกิน wrapper */
+  box-sizing:border-box;              /* นับ padding/scrollbar ใน width */
+}
+
+.pricing-stack img,
+.card img{max-width:100%;height:auto}  /* กันภาพดันกว้าง */
+/* === FILTER BUTTONS === */
+.dest-filters{
+  text-align:center;margin:12px 0 18px;
+  display:flex;justify-content:center;gap:8px;flex-wrap:wrap;
+}
+.dest-filters button{
+  padding:6px 16px;font-size:.85rem;font-weight:700;
+  background:var(--blue);color:#fff;border:none;
+  border-radius:20px;cursor:pointer;transition:background .2s;
+}
+.dest-filters button:hover{background:#1c4876}
+.dest-filters button.active{background:var(--gold);color:#000}
+.card{display:block}                /* fallback – we'll toggle via JS */
+
+</style>
+</head>
+
+<body>
+  <div id="header_wrap"><div id="header"><div id="logo">
+      <img src="Phet_thong_Design_concept.png" alt="PT Logo">
+    </div></div></div>
+  <div id="wrapper">
+    <!-- HEADER -->
+  
+
+    <!-- TOP MENU -->
+    <div id="topmenu_wrap"><div id="topmenu">
+      <ul>
+        <li><a href="#" class="active">HOME</a></li>
+        <li><a href="#pricing">CARS RATE</a></li>
+        <li><a href="#contact">CONTACT&nbsp;US</a></li>
+      </ul>
+    </div></div>
+
+    <div id="content-menu_wrap">
+      <!-- SIDEBAR -->
+      <aside id="leftmenu">
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#pricing">Cars Rate</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+
+        <div class="side-contact">
+          <strong>Click&nbsp;On&nbsp;Image</strong>
+          <a href="https://lin.ee/cFZiCiP"><img src="lineLogo.png" alt="Line" height="36"></a>
+          <a href="https://wa.me/message/YVKNFAJSODULC1"><img src="whatsapp.png" alt="WhatsApp" height="36"></a>
+          <a href="mailto:pt.phetthong@gmail.com"><img src="emailLogo.png" alt="Email" height="36"></a>
+          <strong>pt.phetthong@gmail.com</strong>
+          <a href="https://www.facebook.com/profile.php?id=61574235993858"><img src="facebookLogo.png" alt="Facebook" height="36"></a>
+          <a href="https://www.instagram.com/pt_phetthong/?utm_source=ig_web_button_share_sheet"><img src="instragramLogo.png" alt="Instagram" height="36"></a>
+       <a href="qrCodeWeChat.png" target="_blank">
+    <img src="wechatLogo.png" alt="WeChat QR" height="36">
+</a>
+        </div>
+
+        <div class="left-banners">
+          <img src="Luxury_Cars_Camry.zip_-_1.png" alt="Sedan">
+          <img src="suv-Photoroom.png"         alt="SUV">
+          <img src="van-Photoroom.png"         alt="Van">
+          <img src="sedan-Photoroom.png"       alt="Sedan">
+        </div>
+      </aside>
+
+      <!-- MAIN -->
+      <main id="content-w2">
+        <div id="breadcrumbs">You are here: Home</div>
+
+        <!-- HERO SLIDER (CSS-only) -->
+        <section class="slider" id="hero-slider">
+          <div class="slider__track">
+            <div class="slider__slide" id="slide1">
+              <img src="Luxury_Cars_Camry.zip_-_1.png" alt="Toyota Camry">
+              <a href="#slide4" class="arrow arrow--prev">‹</a>
+              <a href="#slide2" class="arrow arrow--next">›</a>
+            </div>
+            <div class="slider__slide" id="slide2">
+              <img src="suv-Photoroom.png" alt="Modern SUV">
+              <a href="#slide1" class="arrow arrow--prev">‹</a>
+              <a href="#slide3" class="arrow arrow--next">›</a>
+            </div>
+            <div class="slider__slide" id="slide3">
+              <img src="van-Photoroom.png" alt="VIP Van">
+              <a href="#slide2" class="arrow arrow--prev">‹</a>
+              <a href="#slide4" class="arrow arrow--next">›</a>
+            </div>
+            <div class="slider__slide" id="slide4">
+              <img src="sedan-Photoroom.png" alt="Sedan Car">
+              <a href="#slide3" class="arrow arrow--prev">‹</a>
+              <a href="#slide1" class="arrow arrow--next">›</a>
+            </div>
+          </div>
+
+          <div class="slider__nav">
+            <a href="#slide1"></a><a href="#slide2"></a><a href="#slide3"></a><a href="#slide4"></a>
+          </div>
+        </section>
+<div class="dest-box">
+  <ul>
+    <li><strong>Suvarnabhumi Airport</strong><br> (BKK)</li>
+    <li><strong>Don Mueang airport</strong><br> (DMK)</li>
+      <li><strong>Bangkok</strong><br>(Bangkok Area)</li>
+          <li><strong>Pattaya City</strong><br>(Pattaya Area)</li>
+ 
+  </ul>
+
+  <ul>
+       <li><strong>Pattaya Airport</strong> <br>(Utapao airport)</li>
+
+    <li><strong>Huahin</strong><br>(Huahin Area)</li>
+  
+    <li><strong>Koh Chang</strong><br>(KOH Chang Island)</li>
+    <li><strong>Samed Island</strong><br>(Samed Pier/Baan Phe)</li>
+
+  </ul>
+</div>
+
+        <h1>Premium Private Transportation Service</h1>
+        <p><strong>Travel with Peace of Mind – Explore Thailand in Comfort</strong></p>
+        <p>Make your journey in Thailand stress-free with <strong>Phet Thong Tour &amp; Travel</strong>. Whether you’re heading from the airport to your hotel, exploring must-see attractions, or catching your return flight, our private cars, SUVs and VIP vans with professional drivers have you covered.</p>
+
+        <!-- WHY CHOOSE -->
+        <section id="why-choose" style="margin-top:26px">
+          <h2>Why Choose Phet Thong Tour &amp; Travel?</h2>
+          <ul style="list-style:none;padding-left:0;font-size:1rem;line-height:1.6">
+            <li style="margin:6px 0">🚗 <strong>Private &amp; Comfortable</strong> – Enjoy the convenience of a clean, modern vehicle all to yourself – perfect for solo travelers, couples, families, or groups.</li>
+            <li style="margin:6px 0">🌟 <strong>Personalized Service</strong> – We care about every detail of your journey. Our professional drivers are attentive and friendly, ensuring a smooth and enjoyable ride.</li>
+            <li style="margin:6px 0">🛡️ <strong>Safe &amp; Reliable</strong> – All drivers are carefully selected and well-trained, ensuring your safety and peace of mind throughout the trip.</li>
+            <li style="margin:6px 0">💰 <strong>Affordable Luxury</strong> – High-quality service at a price that won’t break your travel budget.</li>
+          </ul>
+        </section>
+<!-- ★★★ Popular Destinations We Drive To ★★★ -->
+<section id="destinations">
+  <h2>Popular Destinations We Drive To</h2>
+<!-- Filter Buttons -->
+<div class="dest-filters">
+  <button data-filter="all" class="active">All</button>
+  <button data-filter="Bangkok">Bangkok</button>
+  <button data-filter="Pattaya">Pattaya</button>
+  <button data-filter="HuaHin">Hua Hin</button>
+  <button data-filter="KohChang">Koh Chang</button>
+  <button data-filter="KohSamet">Koh Samet</button>
+</div>
+
+  <div class="dest-scroll">
+
+    <div class="card" data-cat="Bangkok">
+      <img src="Grand Palace & Wat Phra Kaew.jpg"
+           alt="Grand Palace Bangkok private tour">
+      <h3>Grand Palace &amp; Wat Phra Kaew</h3>
+      <p>Gleaming golden spires and sacred murals—step inside Thailand’s most iconic postcard.</p>
+    </div>
+
+    <div class="card" data-cat="Bangkok">
+      <img src="Wat Arun, Bangkok.jpg"
+           alt="Wat Arun sunset cruise">
+      <h3>Wat Arun, Bangkok</h3>
+      <p>Climb the steep steps at sunset and watch the Chao Phraya blaze orange—Bangkok never looked this epic.</p>
+    </div>
+
+    <div class="card" data-cat="Bangkok">
+      <img src="Chatuchak Weekend Market.avif"
+           alt="Chatuchak weekend market ride">
+      <h3>Chatuchak Weekend Market</h3>
+      <p>15 000 stalls of souvenir heaven &amp; sizzling street-food. Come hungry, leave happy!</p>
+    </div>
+
+    <!-- <div class="card" data-cat="Bangkok">
+      <img src="Damnoen Saduak Floating Market.jpg"
+           alt="Damnoen Saduak floating market trip">
+      <h3>Damnoen Saduak Floating Market</h3>
+      <p>Paddle back in time—boats brimming with fruit, noodles &amp; smiles. Authentic Thailand on the water.</p>
+    </div> -->
+<!-- 
+    <div class="card">
+      <img src="Maeklong Railway Market.jpg"
+           alt="Maeklong railway market transfer">
+      <h3>Maeklong Railway Market</h3>
+      <p>Hold your breath—the train slices through the market inches away! Snap the viral moment.</p>
+    </div> -->
+
+    <div class="card" data-cat="Pattaya">
+      <img src="Sanctuary of Truth, Pattaya.jpg"
+           alt="Sanctuary of Truth Pattaya tour">
+      <h3>Sanctuary of Truth, Pattaya</h3>
+      <p>A jaw-dropping all-wood cathedral by the sea—mythology, craftsmanship, pure wow.</p>
+    </div>
+
+    <div class="card" data-cat="Pattaya">
+      <img src="Koh Larn (Coral Island).webp"
+           alt="Koh Larn coral island taxi">
+      <h3>Koh Larn (Coral Island)</h3>
+      <p>Turquoise water, soft white sand, jet-ski thrills—your tropical fix only 15 min offshore.</p>
+    </div>
+    <div class="card" data-cat="Pattaya">
+  <img src="Walking Street, Pattaya.webp" alt="Pattaya Walking Street nightlife">
+  <h3>Walking Street, Pattaya</h3>
+  <p>Neon‐lit bars, live bands and seafood feasts—Pattaya’s legendary strip never sleeps, and neither will you.</p>
+</div>
+
+<!-- Pattaya Floating Market -->
+<div class="card" data-cat="Pattaya">
+  <img src="Pattaya Floating Market.jpg" alt="Pattaya Four Regions Floating Market">
+  <h3>Pattaya Floating Market</h3>
+  <p>Paddle through four cultural zones, taste local snacks and snap wooden houseboat vibes in one colourful stop.</p>
+</div>
+
+<!-- Art in Paradise 3-D Museum -->
+<!-- <div class="card">
+  <img src="art-in-paradise.jpg" alt="Art in Paradise 3D museum transfer">
+  <h3>Art in Paradise 3-D Museum</h3>
+  <p>Dive into mind-bending murals—pose, click, and become part of every optical-illusion masterpiece.</p>
+</div> -->
+
+<!-- Ripley's Believe It or Not! -->
+<!-- <div class="card">
+  <img src="ripleys-pattaya.jpg" alt="Ripleys Believe It or Not Pattaya ride">
+  <h3>Ripley's Believe It or Not!</h3>
+  <p>Weird, wonderful and downright wacky—over 300 curiosities to make you gasp, grin and say “no way!”.</p>
+</div> -->
+
+<!-- Pattaya Dolphinarium -->
+<div class="card" data-cat="Pattaya">
+  <img src="Pattaya Dolphinarium.jpg" alt="Pattaya Dolphinarium show transfer">
+  <h3>Pattaya Dolphinarium</h3>
+  <p>Watch agile dolphins flip and splash, or upgrade for the unforgettable once-in-a-lifetime swim session.</p>
+</div>
+
+<!-- Underwater World Pattaya -->
+<div class="card" data-cat="Pattaya">
+  <img src="Underwater World Pattaya.jpg" alt="Underwater World Pattaya aquarium">
+  <h3>Underwater World Pattaya</h3>
+  <p>Walk the 100-metre sea tunnel surrounded by sharks, rays and rainbow reefs—no wet suit required.</p>
+</div>
+
+<!-- Pattaya Viewpoint (Khao Phra Tamnak) -->
+<div class="card" data-cat="Pattaya">
+  <img src="Pattaya Viewpoint.jpg" alt="Khao Phra Tamnak Pattaya viewpoint">
+  <h3>Pattaya Viewpoint</h3>
+  <p>Snap the classic panoramic skyline—glistening bay by day, city lights by night. Best selfie spot in town.</p>
+</div>
+
+<!-- Big Buddha Hill (Wat Phra Yai) -->
+<div class="card" data-cat="Pattaya">
+  <img src="Big Buddha Hill.jpg" alt="Big Buddha Hill Wat Phra Yai">
+  <h3>Big Buddha Hill</h3>
+  <p>Climb the naga staircase to a 18-metre golden Buddha and peaceful hilltop breezes above the city buzz.</p>
+</div>
+
+<!-- Silverlake Vineyard -->
+<div class="card" data-cat="Pattaya">
+  <img src="Silverlake Vineyard.jpg" alt="Silverlake Vineyard Pattaya private tour">
+  <h3>Silverlake Vineyard</h3>
+  <p>Rows of vines, Tuscan vibes—sip local wine, ride an e-car tour and capture lavender-filled gardens.</p>
+</div>
+
+<!-- Khao Chi Chan Buddha Mountain -->
+<!-- <div class="card">
+  <img src="Khao Chi Chan Buddha Mountain.jpg" alt="Khao Chi Chan Buddha Mountain">
+  <h3>Khao Chi Chan Buddha Mountain</h3>
+  <p>Marvel at a 109-metre Buddha engraved in gold on a cliff face—spiritual splendour meets epic backdrop.</p>
+</div> -->
+
+<!-- Swiss Sheep Farm Pattaya -->
+<div class="card" data-cat="Pattaya">
+  <img src="Swiss Sheep Farm Pattaya.jpg" alt="Swiss Sheep Farm Pattaya family ride">
+  <h3>Swiss Sheep Farm Pattaya</h3>
+  <p>Alpaca hugs, sheep feeding, windmill backdrops—quirky European farm fun just minutes from the beach.</p>
+</div>
+
+<!-- ▼▼  add these cards after the Pattaya set ▼▼ -->
+
+<!-- Hua Hin Beach & Cicada Market -->
+<div class="card" data-cat="HuaHin">
+  <img src="Hua Hin Beach & Cicada Market.jpg" alt="Hua Hin beach and Cicada night market">
+  <h3>Hua Hin Beach&nbsp;&amp; Cicada Market</h3>
+  <p>Sun-soaked sand by day, boho art & gourmet stalls by night—barefoot bliss with a creative twist.</p>
+</div>
+
+<!-- Vana Nava Water Jungle, Hua Hin -->
+<div class="card" data-cat="HuaHin">
+  <img src="Vana Nava Water Jungle.jpeg" alt="Vana Nava water jungle Hua Hin transfer">
+  <h3>Vana&nbsp;Nava Water Jungle</h3>
+  <p>Ride the Abyss, float the lazy river—Asia’s first “water jungle” blends thrill slides with tropical vibes.</p>
+</div>
+
+<!-- Phraya Nakhon Cave, Sam Roi Yot -->
+<div class="card" data-cat="HuaHin">
+  <img src="Phraya Nakhon Cave.webp" alt="Phraya Nakhon cave royal pavilion tour">
+  <h3>Phraya Nakhon Cave</h3>
+  <p>Hike, boat & climb into a cavern where a royal pavilion glows beneath a natural skylight—pure magic.</p>
+</div>
+
+<!-- White Sand Beach, Koh Chang -->
+<div class="card" data-cat="KohChang">
+  <img src="White Sand Beach, Koh Chang.jpg" alt="White Sand Beach Koh Chang taxi">
+  <h3>White Sand Beach, Koh Chang</h3>
+  <p>Palm-fringed powder sand, chill beach bars and fiery sunsets—paradise without the crowds.</p>
+</div>
+
+<!-- Klong Plu Waterfall, Koh Chang -->
+<div class="card" data-cat="KohChang">
+  <img src="Klong Plu Waterfall.jpg" alt="Klong Plu waterfall Koh Chang">
+  <h3>Klong Plu Waterfall</h3>
+  <p>Easy jungle trek, refreshing plunge pool—perfect midday escape from the island heat.</p>
+</div>
+
+<!-- Sai Kaew Beach, Koh Samet -->
+<div class="card" data-cat="KohSamet">
+  <img src="Sai Kaew Beach, Koh Samet.jpg" alt="Sai Kaew Beach Koh Samet transfer">
+  <h3>Sai Kaew Beach, Koh Samet</h3>
+  <p>Crystal-clear water, powdery sand and lively beachfront cafés—your quick island getaway made easy.</p>
+</div>
+
+  </div><!-- /.dest-scroll -->
+</section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+          <h2>Quick Contact Click On Image.</h2>
+   <div class="contact-grid">
+  <a href="https://lin.ee/cFZiCiP"><img src="lineLogo.png"       alt="Line"></a>
+  <a href="https://wa.me/message/YVKNFAJSODULC1"><img src="whatsapp.png"      alt="WhatsApp"></a>
+  <a href="mailto:pt.phetthong@gmail.com"><img src="emailLogo.png"  alt="Email"></a>
+  <a href="https://www.facebook.com/profile.php?id=61574235993858"><img src="facebookLogo.png"   alt="Facebook"></a>
+  <a href="https://www.instagram.com/pt_phetthong/?utm_source=ig_web_button_share_sheet"><img src="instragramLogo.png" alt="Instagram"></a>
+  <a href="qrCodeWeChat.png" target="_blank"><img src="wechatLogo.png"  alt="WeChat QR"></a>
+<p class="contact-info"><strong>Email:</strong> pt.phetthong@gmail.com<br>
+            <strong>Phone:</strong> 097-941-9177 (PT), 098-184-7026 (Mackys)</p>
+</div>
+          <div class="qr-row" style="margin-bottom: 10%; margin-top: 10%"><img src="pettong.jpg" alt="WhatsApp QR"></div>
+          
+        </section>
+
+        <!-- PRICING -->
+        <section id="pricing">
+          <div class="pricing-stack">
+            <img src="list1.jpg" alt="Price list BKK Airport">
+            <img src="list2.jpg" alt="Price list DMK Airport">
+            <img src="list3.jpg" alt="Price list Bangkok City">
+            <img src="list4.jpg" alt="Price list Pattaya City">
+            <img src="list5.jpg" alt="Price list U-Tapao Airport">
+            <img src="list6.jpg" alt="Price list Hua Hin">
+            <img src="list7.jpg" alt="Price list Koh Chang">
+            <img src="list8.jpg" alt="Price list Samed Island">
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <footer style="background:var(--blue);color:#fff;text-align:center;padding:6px;font-size:.8rem;margin-top:auto">
+      © <span id="yr"></span> Phet Thong Tour &amp; Travel
+    </footer>
+  </div>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('img:not([loading])')
+            .forEach(img => img.setAttribute('loading', 'lazy'));
+  });
+  document.querySelectorAll('.dest-filters button').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    /* เปลี่ยนปุ่ม active */
+    document.querySelector('.dest-filters button.active')?.classList.remove('active');
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.dest-scroll .card').forEach(card=>{
+      const match = filter==='all' || card.dataset.cat===filter;
+      card.style.display = match ? 'block' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>
